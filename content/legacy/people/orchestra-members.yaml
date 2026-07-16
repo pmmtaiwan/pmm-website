@@ -1,0 +1,188 @@
+artistic_leadership:
+- role_zh: 指揮暨藝術總監
+  role_en: Conductor / Artistic Director
+  name: 江靖波
+- role_zh: 首席暨助理指揮
+  role_en: Concertmaster / Assistant Conductor
+  name: 楊竣傑
+former_concertmasters:
+- 黃瀚民
+- 蕭陽德
+sections:
+  Flute:
+    current:
+    - 江淑君
+    - 劉育誠
+    - 許芷綺
+    - 蘇翊婷
+    - 鍾念庭
+    - 石芳瑜
+    - 何宜珊
+    former:
+    - 范芷瑄
+    - 曹沛妮
+    - 盧睿宏
+  Oboe:
+    current:
+    - 游家源
+    - 尤怡婷
+    - 陳瑋莉
+    - 葉沛瑄
+    - 陳語恩
+    former:
+    - 朱貞吟
+    - 呂昂
+  Clarinet:
+    current:
+    - 高承胤
+    - 王采綺
+    - 林佩筠
+    - 夏本寧
+    - 丁孟冬
+    - 陳雅馨
+    - 賴宥峻
+    former: []
+  Bassoon:
+    current:
+    - 張喻涵
+    - 陳昱安
+    - 蔡君昉
+    - 居昕庭
+    former:
+    - 陳郁潔
+    - 江紫瑄
+    - 姚宣憶
+    - 張皓瑜
+  Horn:
+    current:
+    - 陳映竹
+    - 陳光慈
+    - 陳建維
+    - 梁應婷
+    - 楊瑞玲
+    - 林芳瑜
+    - 蔡秉秀
+    former:
+    - 江佳玲
+    - 吳征宇
+  Trumpet:
+    current:
+    - 何敏慈
+    - 林胤辰
+    former:
+    - 鄒佳宏
+    - 諶立修
+    - 楊鎮安
+  Trombone:
+    current:
+    - 馮嘉驊
+    - 楊宏煒
+    - 簡鉦翔
+    - 易家謙
+    former:
+    - 陳冠婷
+    - 王翎
+    - 楊錦龍
+  Tuba:
+    current:
+    - 第五祖平
+    former:
+    - 林一帆
+    - 韓定諒
+  Timpani / Percussion:
+    current:
+    - 陳思廷
+    - 李聖文
+    - 王瑋婷
+    - 邱楷麟
+    - 廖邦豪
+    - 吳瑞宗
+    - 王惟
+    former:
+    - 鍾育喬
+    - 張凱傑
+    - 楊明
+  Harp:
+    current:
+    - 陳淑杏
+    former: []
+  Piano:
+    current:
+    - 陳慧宇
+    former: []
+  Violin:
+    current:
+    - 楊竣傑
+    - 吳芯昀
+    - 呂昉
+    - 黃姿旋
+    - 張震
+    - 鄭蒼嶽
+    - 張明碁
+    - 吳詩涵
+    - 王頌恩
+    - 黃瀞葶
+    - 薛皓儒
+    - 吳建鋒
+    - 黃瀚民
+    - 蕭陽德
+    - 蔡君賢
+    - 藍之妤
+    - 莊力穎
+    - 陳佩綾
+    - 陳育誠
+    - 曾柏鈞
+    former:
+    - 許罡愷
+    - 黃冠勻
+    - 游可珺
+    - 陳品臻
+    - 陳鏡宇
+    - 吳沛綾
+    - 高琦硯
+    - 陳逸群
+    - 林修平
+    - 安庭儀
+    - 安祐萱
+    - 李昀庭
+    - 黃翠屏
+    - 吳宇晨
+  Viola:
+    current:
+    - 劉穎文
+    - 賴以祈
+    - 楊景婷
+    - 江宜珊
+    - 吳佳芬
+    - 楊昀蓁
+    - 黃睿衿
+    - 吳珮瑜
+    former:
+    - 吳凝芝
+    - 謝梓涵
+  Cello:
+    current:
+    - 張序
+    - 簡彤恩
+    - 林明
+    - 吳妮燕
+    - 葉盈汝
+    - 蔡馥伃
+    - 黃慧羽
+    - 伊藤尚維
+    former:
+    - 黃薇諭
+    - 劉純妤
+    - 孫瑋
+  Double Bass:
+    current:
+    - 賴詩筑
+    - 胡莎
+    - 伏芯
+    - 陳美君
+    - 王宇琪
+    - 朱芝屏
+    former:
+    - 王子暘
+    - 黃意然
+    - 鄭絜云

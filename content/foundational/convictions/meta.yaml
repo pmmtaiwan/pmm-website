@@ -1,0 +1,52 @@
+id: convictions
+slug: convictions
+category: foundational
+importance: foundational
+publicationVersion: "1.0"
+archivable: false
+featuredEligible: true
+order: 2
+
+title:
+  en: Our Convictions
+  zh: 我們的信念
+
+navigationTitle:
+  en: Our Convictions
+  zh: 我們的信念
+
+routes:
+  en: /en/convictions
+  zh: /zh/convictions
+
+description:
+  en: Five questions that define why Philharmonia Moments Musicaux exists, how we make music, whom we hope to meet, and what we refuse to become.
+  zh: 五個問題，道出樂興之時為何存在、如何看待音樂、期待與誰相遇，以及我們所拒絕的平庸與將就。
+
+seoTitle:
+  en: Our Convictions | Philharmonia Moments Musicaux
+  zh: 我們的信念｜樂興之時
+
+openGraph:
+  title:
+    en: Our Convictions | Philharmonia Moments Musicaux
+    zh: 我們的信念｜樂興之時
+  description:
+    en: Why we exist. What makes us different. The music-making we believe in. The audience we hope to meet. What we refuse to become.
+    zh: 我們為什麼而存在？我們追尋什麼樣的音樂？我們期待與什麼樣的聽眾相遇相知？
+
+languageAlternates:
+  en: /en/convictions
+  zh-Hant: /zh/convictions
+
+previousPublication:
+  id: manifesto
+  routes:
+    en: /en/manifesto
+    zh: /zh/manifesto
+
+nextPublication:
+  id: our-story
+  routes:
+    en: /en/our-story
+    zh: /zh/our-story

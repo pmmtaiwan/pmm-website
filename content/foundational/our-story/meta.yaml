@@ -1,0 +1,46 @@
+id: our-story
+slug: our-story
+category: foundational
+importance: foundational
+publicationVersion: "1.0"
+archivable: false
+featuredEligible: true
+order: 3
+
+title:
+  en: Our Story
+  zh: 我們的故事
+
+navigationTitle:
+  en: Our Story
+  zh: 我們的故事
+
+routes:
+  en: /en/our-story
+  zh: /zh/our-story
+
+description:
+  en: ""
+  zh: ""
+
+seoTitle:
+  en: Our Story | Philharmonia Moments Musicaux
+  zh: 我們的故事｜樂興之時
+
+openGraph:
+  title:
+    en: Our Story | Philharmonia Moments Musicaux
+    zh: 我們的故事｜樂興之時
+  description:
+    en: From 1998 to today, the story of an orchestra guided by one conviction: Good Music. Period.
+    zh: 從1998年至今，一個樂團始終如一的信念：就是要好音樂！
+
+languageAlternates:
+  en: /en/our-story
+  zh-Hant: /zh/our-story
+
+previousPublication:
+  id: convictions
+  routes:
+    en: /en/convictions
+    zh: /zh/convictions

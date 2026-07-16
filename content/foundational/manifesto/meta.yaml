@@ -1,0 +1,46 @@
+id: manifesto
+slug: manifesto
+category: foundational
+importance: foundational
+publicationVersion: "1.0"
+archivable: false
+featuredEligible: true
+order: 1
+
+title:
+  en: Our Manifesto
+  zh: 我們的宣言
+
+navigationTitle:
+  en: Manifesto
+  zh: 宣言
+
+routes:
+  en: /en/manifesto
+  zh: /zh/manifesto
+
+description:
+  en: ""
+  zh: 在流量、趨勢與注意力稍縱即逝的世界裡，就是要好音樂。
+
+seoTitle:
+  en: Our Manifesto | Philharmonia Moments Musicaux
+  zh: 我們的宣言｜樂興之時
+
+openGraph:
+  title:
+    en: Our Manifesto | Philharmonia Moments Musicaux
+    zh: 我們的宣言｜樂興之時
+  description:
+    en: Good Music. Period. A home for music that deserves to be heard.
+    zh: 就是要好音樂！只把好音樂做好的，樂興之時。
+
+languageAlternates:
+  en: /en/manifesto
+  zh-Hant: /zh/manifesto
+
+nextPublication:
+  id: convictions
+  routes:
+    en: /en/convictions
+    zh: /zh/convictions
