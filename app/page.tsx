@@ -34,7 +34,7 @@ export default function HomePage() {
       <Section eyebrow="Featured Idea" title="The thinking behind the music.">
         <IdeaCard idea={featuredIdea} />
       </Section>
-      <Section eyebrow="Listen" title="Selected traces, prepared for media.">
+      <Section eyebrow="Listen" title="Experience some of our soundprints.">
         <div className="grid gap-px bg-white/15 md:grid-cols-3">
           <MediaBlock type="Video" title="Rehearsal fragment" />
           <MediaBlock type="Recording" title="Archive selection" />
