@@ -7,7 +7,7 @@ type MediaBlockProps = {
 export function MediaBlock({
   type,
   title,
-  description = "Media will be added as recordings, video, and archive material become available."
+  description = "TBL"
 }: MediaBlockProps) {
   return (
     <div className="placeholder-field min-h-64 p-7">
