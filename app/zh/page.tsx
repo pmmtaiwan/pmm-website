@@ -28,7 +28,7 @@ export default function ChineseHomePage() {
         cta={{ href: "/zh/convictions", label: "閱讀我們的信念" }}
       />
       <Section>
-        <QuoteBlock quote="只把好音樂做好的，樂興之時。" cite="樂團信念" />
+        <QuoteBlock quote="只把好音樂做好的，樂興之時。"  />
       </Section>
       <Section eyebrow="關於樂興" title="一個以好音樂為唯一準則的室內樂團。">
         <div className="grid gap-px bg-white/15 md:grid-cols-3">
