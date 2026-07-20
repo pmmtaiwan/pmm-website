@@ -55,7 +55,7 @@ export default function ChineseHomePage() {
               className="bg-charcoal p-7 transition-colors hover:bg-moss/60"
             >
               <h2 className="text-3xl font-normal text-brass">{item.title}</h2>
-              <p className="mt-4 leading-7 text-ink/66">{item.body}</p>
+             
             </a>
           ))}
         </div>
