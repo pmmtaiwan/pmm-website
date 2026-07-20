@@ -36,7 +36,7 @@ const chineseRoutes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://pmmtaiwan.org";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://pmmtaiwan.org";
   const now = new Date();
 
   return [...englishRoutes, ...chineseRoutes].map((route) => ({
