@@ -25,7 +25,7 @@ export default function HomePage() {
       <Section>
         <QuoteBlock
           quote="Philharmonia Moments Musicaux exists for music that still asks to be heard."
-          cite="Governing principle"
+          
         />
       </Section>
       <Section eyebrow="Featured Experience" title="A production as an artistic world.">
