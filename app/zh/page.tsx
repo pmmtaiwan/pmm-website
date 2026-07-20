@@ -60,10 +60,10 @@ export default function ChineseHomePage() {
           ))}
         </div>
       </Section>
-      <Section eyebrow="聯絡" title="讓音樂與新的聽眾相遇。">
+      <Section eyebrow="聯絡" title="讓好音樂與你相遇。">
         <CTA
-          title="邀演、合作、支持與資料更新。"
-          body="若你正在整理演出資料、洽詢合作，或希望參與樂興之時的下一段旅程，歡迎與我們聯繫。"
+          title="邀演、合作、與支持。"
+          body="若你想要洽詢合作，或希望參與樂興之時的下一段旅程，歡迎與我們聯繫。"
           href="/zh/contact"
           label="聯絡我們"
         />
