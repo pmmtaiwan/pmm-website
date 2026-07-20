@@ -30,22 +30,22 @@ export default function ChineseHomePage() {
       <Section>
         <QuoteBlock quote="只把好音樂做好的，樂興之時。"  />
       </Section>
-      <Section eyebrow="關於樂興" title="一個以好音樂為唯一準則的室內樂團。">
+      <Section eyebrow="關於樂興" >
         <div className="grid gap-px bg-white/15 md:grid-cols-3">
           {[
             {
               title: "我們的信念",
-              body: "從為何存在、如何做音樂，到期待與什麼樣的聽眾相遇。",
+              
               href: "/zh/convictions"
             },
             {
               title: "歷年活動",
-              body: "整理自舊站的演出紀錄，持續校對、補足與重建。",
+              
               href: "/zh/archive"
             },
             {
               title: "這裡的人",
-              body: "藝術團隊、樂手與行政夥伴，仍待最終版本確認。",
+              
               href: "/zh/people"
             }
           ].map((item) => (
