@@ -40,7 +40,7 @@ export function MediaBlock({
         href={href}
         target="_blank"
         rel="noreferrer"
-        className="placeholder-field group flex min-h-64 items-end bg-cover bg-center p-7 transition duration-300 hover:brightness-110"
+        className="placeholder-field group isolate flex min-h-64 items-end overflow-hidden bg-cover bg-center p-7 transition-colors duration-300"
         style={{ backgroundImage }}
         aria-label={`${title} — ${description}`}
       >
