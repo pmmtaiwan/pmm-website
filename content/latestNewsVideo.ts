@@ -6,7 +6,7 @@ export type LatestNewsVideoConfig = {
   youtubeUrl: string;
   posterImage: string;
   title: string;
-  caption: string;
+  caption?: string;
 };
 
 export const latestNewsVideoByLocale: Record<Locale, LatestNewsVideoConfig> = {
@@ -23,7 +23,6 @@ export const latestNewsVideoByLocale: Record<Locale, LatestNewsVideoConfig> = {
     youtubeId: "B7XEOa_TX28",
     youtubeUrl: "https://www.youtube.com/watch?v=B7XEOa_TX28",
     posterImage: "/images/page-themes/post-apocalypse-bliss-video-poster.png",
-    title: "《末世後 狂喜》",
-    caption: "焦點影片請於 YouTube 開啟。"
+    title: "《末世後 狂喜》"
   }
 };
