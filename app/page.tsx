@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { CTA } from "@/components/CTA";
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { Hero } from "@/components/Hero";
@@ -7,6 +8,37 @@ import { QuoteBlock } from "@/components/QuoteBlock";
 import { Section } from "@/components/Section";
 import { experiences } from "@/content/experiences";
 import { ideas } from "@/content/ideas";
+
+export const metadata: Metadata = {
+  title: "Philharmonia Moments Musicaux",
+  description:
+    "Official English website of Philharmonia Moments Musicaux, a Taiwan-based orchestra creating distinctive concerts and musical experiences.",
+  keywords: [
+    "Philharmonia Moments Musicaux",
+    "PMM Taiwan",
+    "Taiwan orchestra",
+    "Taiwan chamber orchestra",
+    "classical music Taiwan"
+  ],
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: "/",
+      "zh-Hant": "/zh/",
+      "x-default": "/"
+    }
+  },
+  openGraph: {
+    title: "Philharmonia Moments Musicaux",
+    description: "Good Music. Period. For those who are still curious.",
+    url: "/",
+    siteName: "Philharmonia Moments Musicaux",
+    images: ["/images/philharmonia-hero-pmm-generated-natural-wall-bright.png"],
+    locale: "en_US",
+    alternateLocale: ["zh_TW"],
+    type: "website"
+  }
+};
 
 export default function HomePage() {
   const featuredExperience = experiences[0];
