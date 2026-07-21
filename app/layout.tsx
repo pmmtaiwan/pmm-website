@@ -3,7 +3,7 @@ import "./globals.css";
 import { SiteLayout } from "@/components/SiteLayout";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.pmmtaiwan.org"),
+  metadataBase: new URL("https://pmmtaiwan.org"),
   title: {
     default: "Philharmonia Moments Musicaux / 樂興之時管絃樂團",
     template: "%s | Philharmonia Moments Musicaux"
