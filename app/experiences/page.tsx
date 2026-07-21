@@ -109,23 +109,9 @@ export default function ExperiencesPage() {
         </div>
       </Section>
       <Section eyebrow="Social Channels" title="Find PMM online">
-        <div className="grid gap-5 md:grid-cols-[1.15fr_0.85fr]">
-          <a
-            href="https://www.youtube.com/@PMM1998"
-            target="_blank"
-            rel="noreferrer"
-            className="border border-white/15 bg-charcoal p-7 transition-colors hover:border-brass"
-          >
-            <p className="font-sans text-xs uppercase tracking-[0.16em] text-brass">YouTube</p>
-            <h2 className="mt-4 text-4xl font-normal">Our YouTube home</h2>
-            <p className="mt-5 break-all font-sans text-sm text-ink/62">
-              https://www.youtube.com/@PMM1998
-            </p>
-          </a>
-          <article className="border border-white/15 bg-charcoal p-7">
-            <SocialIconLinks channels={socialChannels} />
-          </article>
-        </div>
+        <article className="flex min-h-40 items-center justify-center border border-white/15 bg-charcoal p-7">
+          <SocialIconLinks channels={socialChannels} />
+        </article>
       </Section>
     </>
   );
