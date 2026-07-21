@@ -38,8 +38,8 @@ export default function ChineseHomePage() {
               href: "/zh/convictions"
             },
             {
-              title: "歷年活動",
-              href: "/zh/archive"
+              title: "我們的故事",
+              href: "/zh/our-story"
             },
             {
               title: "這裡的人",
