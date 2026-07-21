@@ -29,7 +29,6 @@ export default function ChinesePeoplePage() {
         imageAlt="指揮與樂團排練的現場。"
         secondaryImage="/images/page-themes/members-bow-circle.jpg"
         secondaryImageAlt="弦樂手在演出後一同舉起琴弓。"
-        caption="領導、合奏、共同的姿態"
         tone="quiet"
       />
       <Section eyebrow="藝術領導" title="音樂方向與藝術核心。">
