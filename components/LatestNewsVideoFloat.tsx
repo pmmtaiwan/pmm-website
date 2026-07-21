@@ -55,7 +55,9 @@ export function LatestNewsVideoFloat({ config, locale }: LatestNewsVideoFloatPro
           <p className="font-sans text-[0.68rem] uppercase tracking-[0.16em] text-brass">
             {config.title}
           </p>
-          <p className="mt-1 text-sm leading-5 text-ink/68">{config.caption}</p>
+          {config.caption ? (
+            <p className="mt-1 text-sm leading-5 text-ink/68">{config.caption}</p>
+          ) : null}
         </div>
         <button
           type="button"
