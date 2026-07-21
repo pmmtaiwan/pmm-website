@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+const siteUrl = "https://www.pmmtaiwan.org";
+
 const englishRoutes = [
   "",
   "/manifesto",
@@ -36,11 +38,10 @@ const chineseRoutes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://pmmtaiwan.org";
   const now = new Date();
 
   return [...englishRoutes, ...chineseRoutes].map((route) => ({
-    url: new URL(route || "/", baseUrl).toString(),
+    url: new URL(route || "/", siteUrl).toString(),
     lastModified: now,
     changeFrequency: "weekly",
     priority: route === "" || route === "/zh" ? 1 : 0.7
