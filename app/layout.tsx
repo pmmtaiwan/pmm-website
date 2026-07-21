@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { SiteLayout } from "@/components/SiteLayout";
 
+const siteUrl = "https://www.pmmtaiwan.org";
+const siteImage = `${siteUrl}/images/philharmonia-hero-pmm-generated-natural-wall-bright.png`;
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.pmmtaiwan.org"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Philharmonia Moments Musicaux / 樂興之時管絃樂團",
     template: "%s | Philharmonia Moments Musicaux"
@@ -52,28 +55,89 @@ const siteJsonLd = {
   "@graph": [
     {
       "@type": ["Organization", "MusicGroup"],
-      "@id": "https://www.pmmtaiwan.org/#organization",
-      name: "Philharmonia Moments Musicaux",
-      alternateName: ["樂興之時管絃樂團", "PMM Taiwan"],
-      url: "https://www.pmmtaiwan.org/",
-      image:
-        "https://www.pmmtaiwan.org/images/philharmonia-hero-pmm-generated-natural-wall-bright.png",
+      "@id": `${siteUrl}/#organization`,
+      name: [
+        { "@value": "Philharmonia Moments Musicaux", "@language": "en" },
+        { "@value": "樂興之時管絃樂團", "@language": "zh-Hant" }
+      ],
+      alternateName: "PMM",
+      url: `${siteUrl}/`,
+      image: {
+        "@type": "ImageObject",
+        url: siteImage
+      },
+      description: [
+        {
+          "@value":
+            "A Taiwan-based orchestra creating distinctive concerts and musical experiences.",
+          "@language": "en"
+        },
+        {
+          "@value": "來自台灣、持續創造獨特音樂會與音樂體驗的管絃樂團。",
+          "@language": "zh-Hant"
+        }
+      ],
       sameAs: ["https://www.youtube.com/@pmmtaiwan"],
+      contactPoint: {
+        "@type": "ContactPoint",
+        url: `${siteUrl}/contact`,
+        contactType: "general inquiries",
+        availableLanguage: ["en", "zh-Hant"]
+      },
       areaServed: {
+        "@type": "Country",
+        name: "Taiwan"
+      },
+      location: {
         "@type": "Country",
         name: "Taiwan"
       }
     },
     {
       "@type": "WebSite",
-      "@id": "https://www.pmmtaiwan.org/#website",
-      url: "https://www.pmmtaiwan.org/",
-      name: "Philharmonia Moments Musicaux",
-      alternateName: "樂興之時管絃樂團",
+      "@id": `${siteUrl}/#website`,
+      url: `${siteUrl}/`,
+      name: [
+        { "@value": "Philharmonia Moments Musicaux", "@language": "en" },
+        { "@value": "樂興之時管絃樂團", "@language": "zh-Hant" }
+      ],
+      alternateName: "PMM",
       publisher: {
-        "@id": "https://www.pmmtaiwan.org/#organization"
+        "@id": `${siteUrl}/#organization`
       },
       inLanguage: ["en", "zh-Hant"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/#english-homepage`,
+      url: `${siteUrl}/`,
+      name: "Philharmonia Moments Musicaux",
+      inLanguage: "en",
+      isPartOf: {
+        "@id": `${siteUrl}/#website`
+      },
+      about: {
+        "@id": `${siteUrl}/#organization`
+      },
+      publisher: {
+        "@id": `${siteUrl}/#organization`
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/zh/#chinese-homepage`,
+      url: `${siteUrl}/zh/`,
+      name: "樂興之時管絃樂團",
+      inLanguage: "zh-Hant",
+      isPartOf: {
+        "@id": `${siteUrl}/#website`
+      },
+      about: {
+        "@id": `${siteUrl}/#organization`
+      },
+      publisher: {
+        "@id": `${siteUrl}/#organization`
+      }
     }
   ]
 };
