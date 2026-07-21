@@ -1,19 +1,27 @@
 type MediaBlockProps = {
   type: string;
   title: string;
+  href: string;
   description?: string;
 };
 
 export function MediaBlock({
   type,
   title,
-  description = "TBL"
+  href,
+  description = "Watch on YouTube ↗"
 }: MediaBlockProps) {
   return (
-    <div className="placeholder-field min-h-64 p-7">
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className="placeholder-field block min-h-64 p-7 transition-colors hover:bg-moss/60"
+      aria-label={`${title} — ${description}`}
+    >
       <p className="font-sans text-xs uppercase tracking-[0.16em] text-brass">{type}</p>
       <h3 className="mt-4 text-3xl font-normal">{title}</h3>
       <p className="mt-4 text-ink/68">{description}</p>
-    </div>
+    </a>
   );
 }
