@@ -7,20 +7,77 @@ import { QuoteBlock } from "@/components/QuoteBlock";
 import { Section } from "@/components/Section";
 
 export const metadata: Metadata = {
-  title: "樂興之時",
-  description: "【樂興之時】繁體中文網站。就是要好音樂！",
+  title: "樂興之時管絃樂團｜官方網站",
+  description:
+    "樂興之時管絃樂團官方繁體中文網站，提供音樂會、演出計畫、樂團故事、影音與合作資訊。",
+  keywords: [
+    "樂興之時",
+    "樂興之時管絃樂團",
+    "台灣管絃樂團",
+    "台灣室內樂團",
+    "古典音樂會",
+    "Philharmonia Moments Musicaux"
+  ],
   alternates: {
     canonical: "/zh/",
     languages: {
       en: "/",
-      "zh-Hant": "/zh/"
+      "zh-Hant": "/zh/",
+      "x-default": "/"
     }
+  },
+  openGraph: {
+    title: "樂興之時管絃樂團｜官方網站",
+    description: "就是要好音樂！樂興之時管絃樂團官方繁體中文網站。",
+    url: "/zh/",
+    siteName: "樂興之時管絃樂團",
+    images: ["/images/philharmonia-hero-pmm-generated-natural-wall-bright.png"],
+    locale: "zh_TW",
+    alternateLocale: ["en_US"],
+    type: "website"
   }
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "@id": "https://www.pmmtaiwan.org/#organization",
+  name: "樂興之時管絃樂團",
+  alternateName: ["Philharmonia Moments Musicaux", "PMM Taiwan"],
+  url: "https://www.pmmtaiwan.org/zh/",
+  logo: "https://www.pmmtaiwan.org/images/philharmonia-hero-pmm-generated-natural-wall-bright.png",
+  sameAs: ["https://www.youtube.com/@pmmtaiwan"],
+  areaServed: {
+    "@type": "Country",
+    name: "Taiwan"
+  },
+  inLanguage: "zh-Hant"
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.pmmtaiwan.org/zh/#website",
+  url: "https://www.pmmtaiwan.org/zh/",
+  name: "樂興之時管絃樂團",
+  alternateName: "Philharmonia Moments Musicaux",
+  publisher: {
+    "@id": "https://www.pmmtaiwan.org/#organization"
+  },
+  inLanguage: "zh-Hant"
 };
 
 export default function ChineseHomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
       <Hero
         eyebrow="樂興之時管絃樂團"
         title="就是要好音樂！"
