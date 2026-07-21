@@ -18,12 +18,10 @@ export default function JournalPage() {
       <PageScene
         eyebrow="Latest News"
         title="A quiet surface for what is current."
-        body="Announcements, rehearsal notes, interviews, and archival writing. Each update can bring its own visual world without fighting the page."
         image="/images/page-themes/latest-news-shadow-abstract.jpg"
         imageAlt="Abstract shadows cast across pavement."
         previewImage="/images/page-themes/latest-news-daylight-blue.jpg"
         previewImageAlt="Blue light reflected across a curved stage surface."
-        caption="Updates, notices, and current traces"
         tone="quiet"
       />
       <LatestNewsVideoFloat config={latestNewsVideoByLocale.en} locale="en" />
