@@ -36,7 +36,7 @@ export default function HomePage() {
           <MediaBlock
             type="Video"
             title="Rehearsal fragment"
-            href="https://youtu.be/lmy2MGcTc6c?si=aeaGHJtXVGWenJ9P"
+            href="https://youtu.be/rsg49m1GYLA?si=LPSlFVVPfWhiaGb3"
           />
           <MediaBlock
             type="Recording"
@@ -46,7 +46,7 @@ export default function HomePage() {
           <MediaBlock
             type="Excerpt"
             title="Listening room"
-            href="https://youtu.be/rsg49m1GYLA?si=LPSlFVVPfWhiaGb3"
+            href="https://youtu.be/lmy2MGcTc6c?si=aeaGHJtXVGWenJ9P"
           />
         </div>
       </Section>
