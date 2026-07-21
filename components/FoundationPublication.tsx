@@ -26,7 +26,7 @@ type PageSceneData = {
   eyebrow: string;
   title: string;
   body: string;
-  caption: string;
+  caption?: string;
   image: string;
   imageAlt: string;
   previewImage?: string;
@@ -179,7 +179,6 @@ function publicationScene(locale: Locale, slug: string): PageSceneData | null {
           eyebrow: "我們的信念",
           title: "我們的信念",
           body: "就是要好音樂！",
-          caption: "手、譜、光與專注",
           image: "/images/page-themes/convictions-score-hand.jpg",
           imageAlt: "手指翻動樂譜的近距離照片。",
           secondaryImage: "/images/page-themes/convictions-bw-strings.jpg",
