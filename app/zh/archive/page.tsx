@@ -49,7 +49,6 @@ export default function ChineseArchivePage() {
         previewImageAlt="歷年活動頁主視覺。"
         secondaryImage="/images/page-themes/archive-s.jpg"
         secondaryImageAlt="歷年活動頁輔助視覺。"
-        caption="日期、場地、觀眾與記憶"
         tone="quiet"
       />
       <Section eyebrow="歷年活動" title="一些你可能和我們一起走過的足跡">
