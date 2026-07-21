@@ -26,7 +26,6 @@ export default function ChineseHomePage() {
         subtitle="【樂興之時】"
         image="/images/philharmonia-hero-pmm-generated-natural-wall-bright.png"
         luminous
-        cta={{ href: "/zh/convictions", label: "閱讀我們的信念" }}
       />
       <Section>
         <QuoteBlock quote="只把好音樂做好的，樂興之時。" />
