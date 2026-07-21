@@ -83,7 +83,6 @@ export default function ChineseRentPage() {
         previewImageAlt="設備租借頁主視覺。"
         secondaryImage="/images/page-themes/facility-s.jpg"
         secondaryImageAlt="設備租借頁輔助視覺。"
-        caption="空間、譜架、座椅與準備"
         tone="quiet"
       />
 
