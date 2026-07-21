@@ -23,10 +23,7 @@ export default function HomePage() {
         cta={{ href: "/experiences/post-apocalypse-bliss", label: "Enter the next experience" }}
       />
       <Section>
-        <QuoteBlock
-          quote="Philharmonia Moments Musicaux exists for music that still asks to be heard."
-          
-        />
+        <QuoteBlock quote="Philharmonia Moments Musicaux exists for music that still asks to be heard." />
       </Section>
       <Section eyebrow="Featured Experience" title="A production as an artistic world.">
         <ExperienceCard experience={featuredExperience} />
@@ -36,9 +33,21 @@ export default function HomePage() {
       </Section>
       <Section eyebrow="Listen" title="Experience some of our soundprints.">
         <div className="grid gap-px bg-white/15 md:grid-cols-3">
-          <MediaBlock type="Video" title="Rehearsal fragment" />
-          <MediaBlock type="Recording" title="Archive selection" />
-          <MediaBlock type="Excerpt" title="Listening room" />
+          <MediaBlock
+            type="Video"
+            title="Rehearsal fragment"
+            href="https://youtu.be/lmy2MGcTc6c?si=aeaGHJtXVGWenJ9P"
+          />
+          <MediaBlock
+            type="Recording"
+            title="Archive selection"
+            href="https://youtu.be/kLaRlJkIXxM?si=SqsB9MMR9SDpL0gW"
+          />
+          <MediaBlock
+            type="Excerpt"
+            title="Listening room"
+            href="https://youtu.be/rsg49m1GYLA?si=LPSlFVVPfWhiaGb3"
+          />
         </div>
       </Section>
       <Section eyebrow="Support" title="Become part of the journey.">
