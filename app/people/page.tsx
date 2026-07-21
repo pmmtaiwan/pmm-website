@@ -23,7 +23,6 @@ export default function PeoplePage() {
         imageAlt="A conductor works with the orchestra in rehearsal."
         secondaryImage="/images/page-themes/members-bow-circle.jpg"
         secondaryImageAlt="String players raise their bows together after a performance."
-        caption="Leadership, ensemble, shared gesture"
         tone="quiet"
       />
       <Section eyebrow="Artistic Leadership" title="Direction and musical leadership.">
