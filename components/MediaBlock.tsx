@@ -41,15 +41,11 @@ export function MediaBlock({
         target="_blank"
         rel="noreferrer"
         className="placeholder-field group relative isolate flex min-h-64 items-end overflow-hidden bg-cover bg-center [background-clip:padding-box] p-7 transition-colors duration-300"
-        style={{ backgroundImage }}
+        style={{ backgroundImage, borderBottomColor: "#10100e" }}
         aria-label={`${title} — ${description}`}
       >
         <span className="sr-only">YouTube: </span>
         {content}
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-0.5 bg-charcoal"
-        />
       </a>
     );
   }
