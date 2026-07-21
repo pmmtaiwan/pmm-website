@@ -33,7 +33,6 @@ export default function ContactPage() {
         imageAlt="The main visual selected for the PMM conversation page."
         previewImage="/images/page-themes/communicate-background-l.jpg"
         previewImageAlt="The main visual selected for the PMM conversation page."
-        caption="Listening begins as a conversation"
         tone="quiet"
       />
       <Section eyebrow="Story Relay" title="The next phrase is yours.">
@@ -58,7 +57,7 @@ export default function ContactPage() {
             <p className="font-sans text-xs uppercase tracking-[0.16em] text-brass">
               Social channels
             </p>
-            <div className="mt-6">
+            <div className="mt-6 flex justify-center">
               <SocialIconLinks channels={socialChannels} size="large" />
             </div>
           </div>
