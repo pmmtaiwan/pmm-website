@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { CTA } from "@/components/CTA";
 import { Hero } from "@/components/Hero";
 import { MediaBlock } from "@/components/MediaBlock";
@@ -35,23 +36,36 @@ export default function ChineseHomePage() {
           {[
             {
               title: "我們的信念",
-              href: "/zh/convictions"
+              href: "/zh/convictions",
+              image: "/images/zh-convictions.jpg"
             },
             {
               title: "我們的故事",
-              href: "/zh/our-story"
+              href: "/zh/our-story",
+              image: "/images/zh-our-story.jpg"
             },
             {
               title: "這裡的人",
-              href: "/zh/people"
+              href: "/zh/people",
+              image: "/images/zh-people.jpg"
             }
           ].map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="bg-charcoal p-7 transition-colors hover:bg-moss/60"
+              className="group relative isolate min-h-72 overflow-hidden bg-charcoal"
             >
-              <h2 className="text-3xl font-normal text-brass">{item.title}</h2>
+              <Image
+                src={item.image}
+                alt=""
+                fill
+                sizes="(min-width: 768px) 33vw, 100vw"
+                className="object-cover transition duration-700 ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent transition-colors group-hover:from-black/75" />
+              <h2 className="absolute inset-x-0 bottom-0 p-7 text-3xl font-normal text-brass">
+                {item.title}
+              </h2>
             </a>
           ))}
         </div>
