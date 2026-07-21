@@ -62,7 +62,7 @@ export default function ChineseHomePage() {
           <MediaBlock
             type="影片"
             title="排練片段"
-            href="https://youtu.be/lmy2MGcTc6c?si=aeaGHJtXVGWenJ9P"
+            href="https://youtu.be/rsg49m1GYLA?si=LPSlFVVPfWhiaGb3"
             description="在 YouTube 觀看 ↗"
           />
           <MediaBlock
@@ -74,7 +74,7 @@ export default function ChineseHomePage() {
           <MediaBlock
             type="片段"
             title="聆聽室"
-            href="https://youtu.be/rsg49m1GYLA?si=LPSlFVVPfWhiaGb3"
+            href="https://youtu.be/lmy2MGcTc6c?si=aeaGHJtXVGWenJ9P"
             description="在 YouTube 觀看 ↗"
           />
         </div>
