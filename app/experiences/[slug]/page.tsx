@@ -6,6 +6,8 @@ import { MediaBlock } from "@/components/MediaBlock";
 import { Section } from "@/components/Section";
 import { experiences, getExperience } from "@/content/experiences";
 
+const siteUrl = "https://www.pmmtaiwan.org";
+
 export function generateStaticParams() {
   return experiences.map((experience) => ({ slug: experience.slug }));
 }
@@ -17,10 +19,28 @@ export async function generateMetadata({ params }: DetailParams): Promise<Metada
   const experience = getExperience(slug);
   if (!experience) return {};
 
+  const canonicalPath = `/experiences/${experience.slug}`;
+
   return {
     title: experience.title,
     description: experience.summary,
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: canonicalPath,
+        "x-default": canonicalPath
+      }
+    },
     openGraph: {
+      title: experience.title,
+      description: experience.summary,
+      url: canonicalPath,
+      images: [experience.heroImage ?? "/images/philharmonia-hero.png"],
+      locale: "en_US",
+      type: "website"
+    },
+    twitter: {
+      card: "summary_large_image",
       title: experience.title,
       description: experience.summary,
       images: [experience.heroImage ?? "/images/philharmonia-hero.png"]
@@ -33,8 +53,82 @@ export default async function ExperienceDetailPage({ params }: DetailParams) {
   const experience = getExperience(slug);
   if (!experience) notFound();
 
+  const pageUrl = `${siteUrl}/experiences/${experience.slug}`;
+  const imageUrl = new URL(experience.heroImage ?? "/images/philharmonia-hero.png", siteUrl).toString();
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${siteUrl}/`
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Experiences",
+        item: `${siteUrl}/experiences`
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: experience.title,
+        item: pageUrl
+      }
+    ]
+  };
+
+  const eventJsonLd = experience.date
+    ? {
+        "@context": "https://schema.org",
+        "@type": "MusicEvent",
+        "@id": `${pageUrl}#event`,
+        name: experience.title,
+        description: experience.summary,
+        startDate: experience.date,
+        eventStatus:
+          experience.status === "upcoming"
+            ? "https://schema.org/EventScheduled"
+            : "https://schema.org/EventCompleted",
+        eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+        image: [imageUrl],
+        url: pageUrl,
+        organizer: {
+          "@id": `${siteUrl}/#organization`
+        },
+        performer: {
+          "@id": `${siteUrl}/#organization`
+        },
+        ...(experience.venue
+          ? {
+              location: {
+                "@type": "Place",
+                name: experience.venue,
+                address: {
+                  "@type": "PostalAddress",
+                  addressCountry: "TW"
+                }
+              }
+            }
+          : {})
+      }
+    : null;
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {eventJsonLd ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd) }}
+        />
+      ) : null}
       <Hero
         compact
         eyebrow={experience.status}
