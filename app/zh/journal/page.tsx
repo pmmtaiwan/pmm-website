@@ -24,12 +24,10 @@ export default function ChineseJournalPage() {
       <PageScene
         eyebrow="最新消息"
         title="Max Richter在台灣!!!?"
-        body="演出公告、排練札記、訪談與活動紀錄。頁面本身保持低調，讓每一次新的主題素材自然進場。"
         image="/images/page-themes/latest-news-shadow-abstract.jpg"
         imageAlt="地面上抽象的光影。"
         previewImage="/images/page-themes/latest-news-daylight-blue.jpg"
         previewImageAlt="藍色光影映照在弧形舞台表面。"
-        caption="公告、近況、正在形成的痕跡"
         tone="quiet"
       />
       <LatestNewsVideoFloat config={latestNewsVideoByLocale.zh} locale="zh" />
