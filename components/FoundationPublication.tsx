@@ -202,7 +202,6 @@ function publicationScene(locale: Locale, slug: string): PageSceneData | null {
           eyebrow: "我們的故事",
           title: "從一個信念，走向百工眾生",
           body: "樂興之時的故事不只在年表裡，更在觀眾澿淚、樂手相視而笑、樂曲結束但指揮的手尚未放下時，翻騰發生。",
-          caption: "時間、觀眾、舞台記憶",
           image: "/images/page-themes/our-story-background.jpg",
           imageAlt: "我們的故事頁背景影像。",
           previewImage: "/images/page-themes/our-story-l.jpg",
