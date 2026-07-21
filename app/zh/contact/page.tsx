@@ -66,7 +66,7 @@ export default function ChineseContactPage() {
 
           <div className="placeholder-field p-7">
             <p className="font-sans text-xs uppercase tracking-[0.16em] text-brass">Social</p>
-            <div className="mt-6">
+            <div className="mt-6 flex justify-center">
               <SocialIconLinks channels={socialChannels} size="large" />
             </div>
           </div>
