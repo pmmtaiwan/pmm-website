@@ -5,18 +5,33 @@ type MediaBlockProps = {
   description?: string;
 };
 
+function getYouTubeThumbnail(href?: string) {
+  if (!href) return undefined;
+
+  const shortUrlMatch = href.match(/youtu\.be\/([^?&/]+)/);
+  const standardUrlMatch = href.match(/[?&]v=([^?&/]+)/);
+  const videoId = shortUrlMatch?.[1] ?? standardUrlMatch?.[1];
+
+  return videoId ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : undefined;
+}
+
 export function MediaBlock({
   type,
   title,
   href,
   description = "Watch on YouTube ↗"
 }: MediaBlockProps) {
+  const thumbnail = getYouTubeThumbnail(href);
+  const backgroundImage = thumbnail
+    ? `linear-gradient(to top, rgba(8, 10, 8, 0.96) 0%, rgba(8, 10, 8, 0.5) 58%, rgba(8, 10, 8, 0.16) 100%), url("${thumbnail}")`
+    : undefined;
+
   const content = (
-    <>
+    <div>
       <p className="font-sans text-xs uppercase tracking-[0.16em] text-brass">{type}</p>
-      <h3 className="mt-4 text-3xl font-normal">{title}</h3>
-      <p className="mt-4 text-ink/68">{description}</p>
-    </>
+      <h3 className="mt-3 text-3xl font-normal text-ink">{title}</h3>
+      <p className="mt-3 text-ink/75">{description}</p>
+    </div>
   );
 
   if (href) {
@@ -25,13 +40,15 @@ export function MediaBlock({
         href={href}
         target="_blank"
         rel="noreferrer"
-        className="placeholder-field block min-h-64 p-7 transition-colors hover:bg-moss/60"
+        className="placeholder-field group flex min-h-64 items-end bg-cover bg-center p-7 transition duration-300 hover:brightness-110"
+        style={{ backgroundImage }}
         aria-label={`${title} — ${description}`}
       >
+        <span className="sr-only">YouTube: </span>
         {content}
       </a>
     );
   }
 
-  return <div className="placeholder-field min-h-64 p-7">{content}</div>;
+  return <div className="placeholder-field flex min-h-64 items-end p-7">{content}</div>;
 }
