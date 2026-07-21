@@ -77,7 +77,6 @@ export default function RentPage() {
         previewImageAlt="The main visual selected for venue and facilities rental."
         secondaryImage="/images/page-themes/facility-s.jpg"
         secondaryImageAlt="A supporting visual selected for venue and facilities rental."
-        caption="Space, stands, chairs, preparation"
         tone="quiet"
       />
 
