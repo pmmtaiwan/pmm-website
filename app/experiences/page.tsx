@@ -45,7 +45,6 @@ export default function ExperiencesPage() {
         imageAlt="A chamber orchestra performs beneath blue and gold projections."
         secondaryImage="/images/page-themes/experience-quartet-light.jpg"
         secondaryImageAlt="A string quartet performs under theatrical light."
-        caption="Projection, chamber scale, theatrical arrival"
         tone="immersive"
       />
       <Section eyebrow="Pathways" title="Listen to us. Watch us.">
