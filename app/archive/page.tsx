@@ -43,7 +43,6 @@ export default function ArchivePage() {
         previewImageAlt="The main visual selected for the PMM archive page."
         secondaryImage="/images/page-themes/archive-s.jpg"
         secondaryImageAlt="A supporting visual selected for the PMM archive page."
-        caption="Dates, rooms, audiences, traces"
         tone="quiet"
       />
       <Section eyebrow="Archive" title="Events">
