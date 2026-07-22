@@ -35,49 +35,18 @@ export const metadata: Metadata = {
     locale: "zh_TW",
     alternateLocale: ["en_US"],
     type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "樂興之時管絃樂團｜官方網站",
+    description: "就是要好音樂！樂興之時管絃樂團官方繁體中文網站。",
+    images: ["/images/philharmonia-hero-pmm-generated-natural-wall-bright.png"]
   }
-};
-
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "MusicGroup",
-  "@id": "https://www.pmmtaiwan.org/#organization",
-  name: "樂興之時管絃樂團",
-  alternateName: ["Philharmonia Moments Musicaux", "PMM Taiwan"],
-  url: "https://www.pmmtaiwan.org/zh/",
-  logo: "https://www.pmmtaiwan.org/images/philharmonia-hero-pmm-generated-natural-wall-bright.png",
-  sameAs: ["https://www.youtube.com/@pmmtaiwan"],
-  areaServed: {
-    "@type": "Country",
-    name: "Taiwan"
-  },
-  inLanguage: "zh-Hant"
-};
-
-const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://www.pmmtaiwan.org/zh/#website",
-  url: "https://www.pmmtaiwan.org/zh/",
-  name: "樂興之時管絃樂團",
-  alternateName: "Philharmonia Moments Musicaux",
-  publisher: {
-    "@id": "https://www.pmmtaiwan.org/#organization"
-  },
-  inLanguage: "zh-Hant"
 };
 
 export default function ChineseHomePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-      />
       <Hero
         eyebrow="樂興之時管絃樂團"
         title="就是要好音樂！"
