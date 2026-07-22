@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "Official English website of Philharmonia Moments Musicaux, a Taiwan-based orchestra creating distinctive concerts and musical experiences.",
   keywords: [
     "Philharmonia Moments Musicaux",
-    "PMM Taiwan",
+    "PMM",
     "Taiwan orchestra",
     "Taiwan chamber orchestra",
     "classical music Taiwan"
@@ -37,6 +37,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     alternateLocale: ["zh_TW"],
     type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Philharmonia Moments Musicaux",
+    description: "Good Music. Period. For those who are still curious.",
+    images: ["/images/philharmonia-hero-pmm-generated-natural-wall-bright.png"]
   }
 };
 
@@ -87,7 +93,7 @@ export default function HomePage() {
           title="Make room for difficult listening."
           body="PMM invites patrons, partners, and friends who believe that serious listening still needs a room, a rehearsal, and a public life."
           href="/support"
-          label="Support"
+          label="Support Philharmonia Moments Musicaux"
         />
       </Section>
     </>
