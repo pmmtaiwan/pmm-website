@@ -47,13 +47,15 @@ export function Hero({
             : "bg-[linear-gradient(90deg,rgba(16,16,14,.86),rgba(16,16,14,.44)_48%,rgba(16,16,14,.16)),linear-gradient(0deg,rgba(16,16,14,.9),rgba(16,16,14,.06)_52%,rgba(16,16,14,.56))]"
         }`}
       />
-      <div className="mx-auto grid w-full max-w-site content-center px-5 py-16 md:px-10 lg:px-14">
+      <div className="hero-copy mx-auto grid w-full max-w-site content-center px-5 py-16 md:px-10 lg:px-14">
         {eyebrow ? (
           <p className="font-sans text-xs uppercase tracking-[0.18em] text-brass">{eyebrow}</p>
         ) : null}
         <h1
-          className={`mt-5 max-w-5xl font-serif font-normal leading-[0.9] tracking-normal ${
-            compact ? "text-5xl md:text-7xl" : "text-[4.8rem] md:text-[9rem] lg:text-[11rem]"
+          className={`mt-5 max-w-full font-serif font-normal leading-[0.9] tracking-normal md:max-w-5xl ${
+            compact
+              ? "text-5xl md:text-7xl"
+              : "text-[clamp(3.4rem,16vw,4.8rem)] md:text-[9rem] lg:text-[11rem]"
           }`}
         >
           {title}
