@@ -1,9 +1,12 @@
 import type { MetadataRoute } from "next";
+import { experiences } from "@/content/experiences";
+import { ideas } from "@/content/ideas";
+import { journalEntries } from "@/content/journal";
 
 const siteUrl = "https://www.pmmtaiwan.org";
 
 const routePairs = [
-  ["/", "/zh/"],
+  ["/", "/zh"],
   ["/manifesto", "/zh/manifesto"],
   ["/convictions", "/zh/convictions"],
   ["/our-story", "/zh/our-story"],
@@ -20,14 +23,18 @@ const routePairs = [
 ] as const;
 
 const englishOnlyRoutes = ["/philosophy"] as const;
+const peopleDetailRoutes = [
+  "/people/chun-chieh-yang",
+  "/people/paul-chiang",
+  "/zh/people/chun-chieh-yang",
+  "/zh/people/paul-chiang"
+] as const;
 
 function absoluteUrl(path: string) {
   return new URL(path, siteUrl).toString();
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
   const pairedEntries: MetadataRoute.Sitemap = routePairs.flatMap(([englishPath, chinesePath]) => {
     const languages = {
       en: absoluteUrl(englishPath),
@@ -38,16 +45,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return [
       {
         url: absoluteUrl(englishPath),
-        lastModified: now,
         changeFrequency: "weekly" as const,
         priority: englishPath === "/" ? 1 : 0.7,
         alternates: { languages }
       },
       {
         url: absoluteUrl(chinesePath),
-        lastModified: now,
         changeFrequency: "weekly" as const,
-        priority: chinesePath === "/zh/" ? 1 : 0.7,
+        priority: chinesePath === "/zh" ? 1 : 0.7,
         alternates: { languages }
       }
     ];
@@ -55,7 +60,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const englishOnlyEntries: MetadataRoute.Sitemap = englishOnlyRoutes.map((path) => ({
     url: absoluteUrl(path),
-    lastModified: now,
     changeFrequency: "weekly",
     priority: 0.7,
     alternates: {
@@ -66,5 +70,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }));
 
-  return [...pairedEntries, ...englishOnlyEntries];
+  const detailEntries: MetadataRoute.Sitemap = [
+    ...experiences.map((experience) => `/experiences/${experience.slug}`),
+    ...ideas.map((idea) => `/ideas/${idea.slug}`),
+    ...journalEntries.map((entry) => `/journal/${entry.slug}`),
+    ...peopleDetailRoutes
+  ].map((path) => ({
+    url: absoluteUrl(path),
+    changeFrequency: "monthly",
+    priority: 0.6
+  }));
+
+  return [...pairedEntries, ...englishOnlyEntries, ...detailEntries];
 }

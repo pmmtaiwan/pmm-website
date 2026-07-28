@@ -15,12 +15,22 @@ export async function generateMetadata({ params }: DetailParams): Promise<Metada
   const idea = getIdea(slug);
   if (!idea) return {};
 
+  const canonicalPath = `/ideas/${idea.slug}`;
+
   return {
     title: idea.title,
     description: idea.summary,
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: canonicalPath,
+        "x-default": canonicalPath
+      }
+    },
     openGraph: {
       title: idea.title,
       description: idea.summary,
+      url: canonicalPath,
       images: ["/images/philharmonia-hero.png"]
     }
   };
