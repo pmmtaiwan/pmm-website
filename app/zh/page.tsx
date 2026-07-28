@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     "Philharmonia Moments Musicaux"
   ],
   alternates: {
-    canonical: "/zh/",
+    canonical: "/zh",
     languages: {
       en: "/",
-      "zh-Hant": "/zh/",
+      "zh-Hant": "/zh",
       "x-default": "/"
     }
   },

@@ -15,12 +15,22 @@ export async function generateMetadata({ params }: DetailParams): Promise<Metada
   const entry = getJournalEntry(slug);
   if (!entry) return {};
 
+  const canonicalPath = `/journal/${entry.slug}`;
+
   return {
     title: entry.title,
     description: entry.summary,
+    alternates: {
+      canonical: canonicalPath,
+      languages: {
+        en: canonicalPath,
+        "x-default": canonicalPath
+      }
+    },
     openGraph: {
       title: entry.title,
       description: entry.summary,
+      url: canonicalPath,
       images: ["/images/philharmonia-hero.png"]
     }
   };
