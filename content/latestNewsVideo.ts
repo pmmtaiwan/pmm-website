@@ -23,6 +23,6 @@ export const latestNewsVideoByLocale: Record<Locale, LatestNewsVideoConfig> = {
     youtubeId: "B7XEOa_TX28",
     youtubeUrl: "https://www.youtube.com/watch?v=B7XEOa_TX28",
     posterImage: "/images/page-themes/post-apocalypse-bliss-video-poster.png",
-    title: "《末世後 狂喜》"
+    title: "《末日後 狂喜》"
   }
 };
