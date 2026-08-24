@@ -29,7 +29,7 @@ export const latestNewsFeatureByLocale: Record<Locale, LatestNewsFeature> = {
     performersLabel: "Performers",
     performers: [
       "Violin Solo: Simos Papanas, Director and Concertmaster, Thessaloniki State Symphony Orchestra",
-      "Paul Chiang, Conductor",
+      "Paul Chiang, Artistic Director",
       "Philharmonia Moments Musicaux"
     ],
     videoLabel: "Watch the featured video",
@@ -46,7 +46,7 @@ export const latestNewsFeatureByLocale: Record<Locale, LatestNewsFeature> = {
     performersLabel: "演出者",
     performers: [
       "希臘國立塞薩洛尼基交響樂團首席小提琴家 希莫帕帕納 Simos Papanas",
-      "江靖波 指揮",
+      "江靖波 藝術總監",
       "【樂興之時】"
     ],
     videoLabel: "觀看焦點影片",
