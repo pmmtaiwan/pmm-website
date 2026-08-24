@@ -31,7 +31,7 @@ export default function ChineseJournalPage() {
         tone="quiet"
       />
       <LatestNewsVideoFloat config={latestNewsVideoByLocale.zh} locale="zh" />
-      <Section eyebrow="最新消息" title="末世後 狂喜">
+      <Section eyebrow="最新消息" title="末日後 狂喜">
         <LatestNewsFeature feature={latestNewsFeatureByLocale.zh} />
       </Section>
     </>
