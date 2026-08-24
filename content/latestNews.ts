@@ -18,7 +18,7 @@ export const latestNewsFeatureByLocale: Record<Locale, LatestNewsFeature> = {
   en: {
     title: "Post-Apocalypse Bliss",
     timeLabel: "Time",
-    time: "11 September 2026, 21:11",
+    time: "11 September 2026, 20:00",
     placeLabel: "Place",
     place: "Taipei Bioinnovation Park Multipurpose Hall",
     programLabel: "Program",
@@ -38,7 +38,7 @@ export const latestNewsFeatureByLocale: Record<Locale, LatestNewsFeature> = {
   zh: {
     title: "末世後 狂喜",
     timeLabel: "時間",
-    time: "2026年9月11日 21:11",
+    time: "2026年9月11日 20:00",
     placeLabel: "地點",
     place: "台北生技園區多功能廳",
     programLabel: "演出內容",
