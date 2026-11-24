@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { LatestNewsFeature } from "@/components/LatestNewsFeature";
-import { LatestNewsVideoFloat } from "@/components/LatestNewsVideoFloat";
 import { PageScene } from "@/components/PageScene";
 import { Section } from "@/components/Section";
 import { latestNewsFeatureByLocale } from "@/content/latestNews";
-import { latestNewsVideoByLocale } from "@/content/latestNewsVideo";
 
 export const metadata: Metadata = {
   title: "最新消息 | 樂興之時",
@@ -19,20 +17,21 @@ export const metadata: Metadata = {
 };
 
 export default function ChineseJournalPage() {
+  const feature = latestNewsFeatureByLocale.zh;
+
   return (
     <>
       <PageScene
         eyebrow="最新消息"
-        title="Max Richter在台灣!!!?"
-        image="/images/page-themes/latest-news-shadow-abstract.jpg"
-        imageAlt="地面上抽象的光影。"
-        previewImage="/images/page-themes/latest-news-daylight-blue.jpg"
-        previewImageAlt="藍色光影映照在弧形舞台表面。"
+        title="重聽貝多芬"
+        image="/images/page-themes/rehearing-beethoven-pathetique.webp"
+        imageAlt="以古老手稿質感重新呈現的貝多芬《悲愴》奏鳴曲弦樂四重奏首頁。"
+        previewImage="/images/page-themes/rehearing-beethoven-pathetique.webp"
+        previewImageAlt="聚光燈下、以羊皮紙質感呈現的貝多芬《悲愴》奏鳴曲弦樂四重奏樂譜。"
         tone="quiet"
       />
-      <LatestNewsVideoFloat config={latestNewsVideoByLocale.zh} locale="zh" />
-      <Section eyebrow="最新消息" title="末日後 狂喜">
-        <LatestNewsFeature feature={latestNewsFeatureByLocale.zh} />
+      <Section eyebrow="最新消息" title={feature.title}>
+        <LatestNewsFeature feature={feature} />
       </Section>
     </>
   );
