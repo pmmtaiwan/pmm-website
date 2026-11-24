@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { LatestNewsFeature } from "@/components/LatestNewsFeature";
-import { LatestNewsVideoFloat } from "@/components/LatestNewsVideoFloat";
 import { PageScene } from "@/components/PageScene";
 import { Section } from "@/components/Section";
 import { latestNewsFeatureByLocale } from "@/content/latestNews";
-import { latestNewsVideoByLocale } from "@/content/latestNewsVideo";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata(
@@ -13,20 +11,21 @@ export const metadata: Metadata = pageMetadata(
 );
 
 export default function JournalPage() {
+  const feature = latestNewsFeatureByLocale.en;
+
   return (
     <>
       <PageScene
         eyebrow="Latest News"
-        title="A quiet surface for what is current."
-        image="/images/page-themes/latest-news-shadow-abstract.jpg"
-        imageAlt="Abstract shadows cast across pavement."
-        previewImage="/images/page-themes/latest-news-daylight-blue.jpg"
-        previewImageAlt="Blue light reflected across a curved stage surface."
+        title="Rehearing Beethoven"
+        image="/images/page-themes/rehearing-beethoven-pathetique.webp"
+        imageAlt="The opening page of Beethoven's Pathétique Sonata reimagined as an aged manuscript for string quartet."
+        previewImage="/images/page-themes/rehearing-beethoven-pathetique.webp"
+        previewImageAlt="Beethoven's Pathétique Sonata arranged for string quartet on an illuminated aged manuscript."
         tone="quiet"
       />
-      <LatestNewsVideoFloat config={latestNewsVideoByLocale.en} locale="en" />
-      <Section eyebrow="Latest News" title="Post-Apocalypse Bliss">
-        <LatestNewsFeature feature={latestNewsFeatureByLocale.en} />
+      <Section eyebrow="Latest News" title={feature.title}>
+        <LatestNewsFeature feature={feature} />
       </Section>
     </>
   );
